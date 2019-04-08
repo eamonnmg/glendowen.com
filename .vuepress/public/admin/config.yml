@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: eamonnmg/glendowen-website
+  repo: eamonnmg/glendowen.com
   branch: master # Branch to update (optional; defaults to master)
 media_folder: ".vuepress/public/images"
 public_folder: ".vuepress/dist/"
