@@ -1,6 +1,8 @@
 ---
-title: Home
+home: true
+title: home
 ---
+
 # Welcome to Glendowen
 
 ![An image](https://picsum.photos/500/200?random)
