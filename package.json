@@ -1,11 +1,15 @@
 {
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "build": "vuepress build"
   },
   "devDependencies": {
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "tailwindcss": "^0.7.4"
+    "tailwindcss": "^0.7.4",
+    "vuepress": "^1.0.0-alpha.47"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.2.7",
+    "vue-carousel": "^0.18.0"
   }
 }

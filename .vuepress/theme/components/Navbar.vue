@@ -1,5 +1,5 @@
 <template>
-    <nav class="flex items-center justify-between flex-wrap bg-white border-black border-b-2 p-3">
+    <nav class="flex items-center justify-between flex-wrap bg-white border-black border-b-1 p-3">
         <div class="flex items-center flex-no-shrink text-black mr-6">
             <span class="font-semibold text-xl text-black tracking-tight">Glendowen</span>
         </div>
