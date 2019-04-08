@@ -1,4 +1,9 @@
 ---
+carouselSlides:
+  - description: This is a heading from frontmatter
+    src: 'https://picsum.photos/1200/600?image=1081'
+  - description: This is a glendowen collage
+    src: 'https://picsum.photos/1200/600?random'
 home: true
 title: home
 ---
