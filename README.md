@@ -1,20 +1,5 @@
 ---
-{
-
-    "home": true,
-    "carouselSlides": [
-    {
-        "src": "https://picsum.photos/1200/600?image=1081",
-        "description": "This is a heading from frontmatter"
-    },
-    {
-            "src": "https://picsum.photos/1200/600?random",
-            "description": "This is a glendowen collage"
-        }
-    ]
-
-}
-
+title: Home
 ---
 
 # Welcome to Glendowen
