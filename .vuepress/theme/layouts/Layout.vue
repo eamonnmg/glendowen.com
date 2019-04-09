@@ -2,7 +2,9 @@
     <div>
         <navbar></navbar>
 
-        <Home v-if="$page.frontmatter.home" class="mt-4 mb-4"/>
+        <div class="container mx-auto flex max-w-1xl justify-center">
+            <Home v-if="$page.frontmatter.home" class="mt-4 mb-4"/>
+        </div>
 
         <div class="border-t pin-b">
             footer

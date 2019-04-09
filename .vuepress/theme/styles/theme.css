@@ -36,8 +36,8 @@
  * @import "components/forms";
  */
 
-.btn {
-    color: red;
+.h2 {
+    @apply text-3xl font-normal mb-4;
 }
 
 /**

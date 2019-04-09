@@ -672,6 +672,13 @@
   resolved "https://registry.yarnpkg.com/@glidejs/glide/-/glide-3.2.7.tgz#00511dacef58f371d4084d015dc8413bee352a7d"
   integrity sha512-ufsSwK2gZUg+DePAe77RG9OYEW5scRHVNMimqahSxZu7SvMqAs1SFiB0+gln1BqEnaXXgjgoDhcjwA8eyleXDA==
 
+"@google/maps@^0.5.5":
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/@google/maps/-/maps-0.5.5.tgz#478a5791e3b8d444be966462daec3ee43eb331e0"
+  integrity sha512-RSZriyE2XViVhXgdEcQaEu3jMYh2A/jS0VahLHXqGO0VfPyEbDac4PAn7/hBJiTavWpxchKfe5OI9inJofFWxA==
+  dependencies:
+    uuid ">=2.2.1"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -3614,6 +3621,11 @@ good-listener@^1.2.2:
   integrity sha1-1TswzfkxPf+33JoNR3CWqm0UXFA=
   dependencies:
     delegate "^3.1.2"
+
+google-maps@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/google-maps/-/google-maps-3.3.0.tgz#4432b4715406bc15268ad35b1dd1b04d974956a6"
+  integrity sha512-pj4En0cWKG+lcBvC7qrzu5ItiMsYNTgjG2capsPzAbAM/O8ftugGpUUftTTwdGL8KlNvB4CEZ6IBWwpWYzUEpw==
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.15"
@@ -8055,7 +8067,7 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-uuid@^3.0.1, uuid@^3.3.2:
+uuid@>=2.2.1, uuid@^3.0.1, uuid@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
