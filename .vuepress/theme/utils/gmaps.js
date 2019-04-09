@@ -3,7 +3,7 @@
 const API_KEY = 'AIzaSyDEMcKJO6HVsPg153Mln0kl9JUNYZgiA5g';
 const CALLBACK_NAME = 'gmapsCallback';
 
-let initialized = !!window.google;
+let initialized = false;
 let resolveInitPromise;
 let rejectInitPromise;
 // This promise handles the initialization
@@ -13,7 +13,7 @@ const initPromise = new Promise((resolve, reject) => {
     rejectInitPromise = reject;
 });
 
-export default function init() {
+export default function init(window) {
     // If Google Maps already is initialized
     // the `initPromise` should get resolved
     // eventually.

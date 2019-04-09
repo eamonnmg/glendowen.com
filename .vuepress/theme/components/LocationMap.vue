@@ -12,7 +12,8 @@
         name: "location-map.vue",
         async mounted() {
             const vm = this;
-            const google = await gmapsInit();
+            const windowRef = window;
+            const google = await gmapsInit(window);
             const map = new google.maps.Map(this.$el,{
                 zoom: 9,
                 center: GLENDOWEN_COORDINATES,
