@@ -25,7 +25,9 @@
             <div class="md:w-1/2 sm:w-full">
                 <h2 class="h2">Location</h2>
 
-                <location-map></location-map>
+                <div class="location-map">
+                    <location-map></location-map>
+                </div>
             </div>
         </div>
 
@@ -44,3 +46,9 @@
 </script>
 
 <style src="../styles/theme.css"></style>
+<style scoped>
+    .location-map {
+        height: 400px;
+    }
+
+</style>
