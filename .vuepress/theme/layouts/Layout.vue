@@ -1,26 +1,27 @@
 <template>
     <div>
-        <navbar></navbar>
+        <site-header></site-header>
 
-        <div class="container mx-auto flex max-w-1xl justify-center">
+        <div class="container mx-auto">
+
             <Home v-if="$page.frontmatter.home" class="mt-4 mb-4"/>
         </div>
+
 
         <div class="border-t pin-b">
             footer
 
         </div>
 
-
     </div>
 </template>
 
 <script>
-    import Navbar from '../components/Navbar'
+    import SiteHeader from '../components/SiteHeader'
     import Home from '../components/Home'
     export default {
         components: {
-            Navbar,
+            SiteHeader,
             Home,
         }
     }

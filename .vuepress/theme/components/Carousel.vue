@@ -1,24 +1,28 @@
 <template>
-    <div class="carousel">
-        <div class="glide">
+    <div class="container">
+        <div class="glide ">
             <div data-glide-el="track" class="glide__track">
                 <ul class="glide__slides">
                     <li class="glide__slide"
                         v-for="(slide,index) in slides"
                         :key="index"
                     >
-                        <div class="container">
-                            <div class="absolute container w-full h-24 pin-b">
-                                <div class="container relative opacity-50 bg-white flex h-full w-full items-end">
+                            <div class="container absolute w-full h-24 pin-b">
+                                <div class="relative opacity-50 bg-white flex h-full w-full items-end">
 
                                 </div>
 
-                                <h2 class="pin-b pin-r mb-6 mr-2 absolute">
-                                    {{slide.description}}
-                                </h2>
+                                <div class="absolute container h-full w-full pin-t">
+                                    <div class="relative w-full h-full flex flex-wrap md:justify-end items-center">
+                                        <p class="h2 w-screen">
+                                            {{slide.description}}
+                                        </p>
+                                    </div>
+                                </div>
+
+
                             </div>
                             <img :src="slide.src" :alt="slide.description">
-                        </div>
                     </li>
                 </ul>
             </div>
@@ -50,14 +54,6 @@
                 type: 'carousel',
                 perView: 1,
                 focusAt: 'center',
-                breakpoints: {
-                    800: {
-                        perView: 2
-                    },
-                    480: {
-                        perView: 1
-                    }
-                }
             }).mount();
         }
     }
