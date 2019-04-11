@@ -4,7 +4,6 @@ carouselSlides:
     src: 'https://picsum.photos/1200/600?image=1081'
   - description: This is a glendowen collage
     src: 'https://picsum.photos/1200/600?random'
-home: true
 title: home
 ---
 ![An image](https://picsum.photos/600/200?random)

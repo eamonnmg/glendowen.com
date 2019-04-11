@@ -11,9 +11,9 @@
             </div>
             <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
                 <div class="text-sm sm:flex-grow">
-                    <a href="#" class="no-underline block mt-4 sm:inline-block sm:mt-0 text-black-lighter hover:text-black mr-4">
-                        Docs
-                    </a>
+                    <router-link :to="'/about'" class="no-underline block mt-4 sm:inline-block sm:mt-0 text-black-lighter hover:text-black mr-4">
+                        About
+                    </router-link>
                     <a href="#" class="no-underline block mt-4 sm:inline-block sm:mt-0 text-black-lighter hover:text-black mr-4">
                         Examples
                     </a>

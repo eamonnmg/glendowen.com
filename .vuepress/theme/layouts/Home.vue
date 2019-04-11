@@ -23,8 +23,8 @@
 </template>
 
 <script>
-    import Carousel from './Carousel';
-    import LocationMap from './LocationMap';
+    import Carousel from '../components/Carousel';
+    import LocationMap from '../components/LocationMap';
     export default {
         components: {
             Carousel,
