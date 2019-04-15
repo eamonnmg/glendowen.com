@@ -1,3 +1,4 @@
+
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
@@ -36,9 +37,6 @@
  * @import "components/forms";
  */
 
-.h2 {
-    @apply text-3xl font-normal mb-4;
-}
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your
@@ -49,6 +47,8 @@
  * @import "tailwindcss/utilities";
  */
 @tailwind utilities;
+
+
 
 /**
  * Here you would add any custom utilities you need that don't come out of the
@@ -65,4 +65,27 @@
  * @import "utilities/skew-transforms";
  */
 
+@font-face {
+  font-family: 'stonehenge regular';
+  src: url('/fonts/stonehenge.ttf') format('ttf');
+}
 
+.text-celtic {
+  font-family: 'stonehenge', serif;
+}
+
+.h2 {
+  @apply text-3xl font-normal mb-4;
+}
+
+.nav-link {
+  @apply text-grey-darkest no-underline block mt-4 mr-4;
+}
+.nav-link:hover {
+  @apply text-black;
+}
+@screen sm {
+  .nav-link {
+    @apply inline-block mt-0;
+  }
+}

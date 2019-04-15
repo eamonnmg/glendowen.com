@@ -2,7 +2,9 @@
     <div class="font-sans antialiased">
         <nav class="flex items-center justify-between flex-wrap bg-white p-6 border-purple border-b">
             <div class="flex items-center flex-no-shrink text-black mr-6">
-                <h1>Glendowen</h1>
+                <router-link to="/" class="nav-link">
+                    <h1 class="text-celtic">Glendowen</h1>
+                </router-link>
             </div>
             <div class="block sm:hidden">
                 <button @click="toggle" class="flex items-center px-3 py-2 border rounded text-black-lighter border-white-light hover:text-black hover:border-white">
@@ -11,15 +13,9 @@
             </div>
             <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
                 <div class="text-sm sm:flex-grow">
-                    <router-link :to="'/about'" class="no-underline block mt-4 sm:inline-block sm:mt-0 text-black-lighter hover:text-black mr-4">
+                    <router-link :to="'/about'" class="nav-link">
                         About
                     </router-link>
-                    <a href="#" class="no-underline block mt-4 sm:inline-block sm:mt-0 text-black-lighter hover:text-black mr-4">
-                        Examples
-                    </a>
-                    <a href="#" class="no-underline block mt-4 sm:inline-block sm:mt-0 text-black-lighter hover:text-black">
-                        Blog
-                    </a>
                 </div>
                 <div>
                     <a href="#" class="no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent hover:text-black hover:bg-white mt-4 sm:mt-0">Facebook</a>
