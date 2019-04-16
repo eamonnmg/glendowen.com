@@ -1,5 +1,6 @@
 <template>
-        <main class="container border p-6 m-6">
+    <div class="mx-auto max-w-xl">
+        <main class="container border p-6 sm:m-6 ">
             <article class="text-base font-sans leading-normal tracking-normal">
                 <header class="mb-6">
                     <h1>{{$page.frontmatter.title}}</h1>
@@ -8,6 +9,7 @@
                 <Content></Content>
             </article>
         </main>
+    </div>
 </template>
 
 <script>
