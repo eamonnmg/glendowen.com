@@ -70,13 +70,23 @@
   src: url('/fonts/stonehenge.ttf') format('ttf');
 }
 
+body {
+  // font-family: Lato, Helvetica, Arial, sans-serif;
+}
+
+p {
+  @apply my-4;
+}
+
 .text-celtic {
   font-family: 'stonehenge', serif;
 }
 
 .h2 {
-  @apply text-3xl font-normal mb-4;
+  @apply text-3xl mb-4;
 }
+
+.page-body-text
 
 .nav-link {
   @apply text-grey-darkest no-underline block mt-4 mr-4;

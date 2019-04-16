@@ -18,7 +18,7 @@
                     </router-link>
                 </div>
                 <div>
-                    <a href="#" class="no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent hover:text-black hover:bg-white mt-4 sm:mt-0">Facebook</a>
+                    <a href="https://www.facebook.com/glendowencraftshop/" target="_blank" class="no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-black border-white hover:border-transparent hover:text-black hover:bg-white mt-4 sm:mt-0">Facebook</a>
                 </div>
             </div>
         </nav>
