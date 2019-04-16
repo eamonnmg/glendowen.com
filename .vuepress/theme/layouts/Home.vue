@@ -8,6 +8,27 @@
 
                 <Content/>
 
+                <div class="container flex mt-6">
+                    <div class="w-1/2">
+                        <h4>Address</h4>
+                        <ul class="list-reset">
+                            <li>
+                                Meentagh Glen
+                            </li>
+                            <li>Clonmany</li>
+                            <li>Co Donegal</li>
+                            <li>Phone: 074 93 76265</li>
+                        </ul>
+                    </div>
+                    <div class="w-1/2">
+                        <h4>Opening Hours</h4>
+                        <ul class="list-reset">
+                            <li>Monday to Saturday</li>
+                            <li>10:30am to 5:30pm</li>
+                        </ul>
+                    </div>
+                </div>
+
 
             </div>
             <div class="md:w-1/2 w-full p-2">
