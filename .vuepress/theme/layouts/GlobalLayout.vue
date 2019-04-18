@@ -2,7 +2,7 @@
     <div>
         <site-header></site-header>
 
-        <div class="container mx-auto">
+        <div class="container mx-auto sc">
             <component :is="layout"></component>
         </div>
 
@@ -11,6 +11,7 @@
             footer
 
         </div>
+
 
     </div>
 </template>
@@ -32,4 +33,9 @@
     }
 </script>
 
-<style  src="../../../node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+<style scoped>
+    .modal-open {
+        max-height: 100vh;
+        overflow: hidden;
+    }
+</style>
