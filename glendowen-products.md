@@ -5,6 +5,4 @@ layout: Page
 
 ---
 
-glendowen products
-
 <JustifiedCloudinaryImageGallery/>

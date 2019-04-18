@@ -8,6 +8,8 @@
         <light-box
                 ref="lightbox"
                 :images="lightBoxImages"
+                :show-thumbs="false"
+                :show-light-box="false"
         ></light-box>
     </div>
 
@@ -93,7 +95,6 @@
             setLightBoxImages(){
                 this.lightBoxImages = this.imageTiles.map((tile, index) => {
                     return {
-                        thumb: tile.url,
                         src: tile.url,
                     }
                 });
