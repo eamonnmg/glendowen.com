@@ -27,8 +27,7 @@
             return {
                 cloudinaryImageList: [],
                 layoutGeometry: [],
-                imageUrls: [],
-                imageSizeRatios: [],
+                imageList: [],
                 imageTiles: [],
                 lightBoxImages: [], // ref: https://github.com/pexea12/vue-image-lightbox#usage
 
@@ -45,13 +44,14 @@
                 .then((response) => {
                     this.cloudinaryImageList = response.data.resources;
 
-                    this.setImageSizeRatios();
 
-                    this.layoutGeometry = JustifiedLayout(this.imageSizeRatios, {
+                    this.layoutGeometry = JustifiedLayout(this.cloudinaryImageList, {
                         containerWidth: this.$el.offsetWidth,
                     })
 
-                    this.setImageUrls();
+                    this.setImageList();
+
+
                     this.setImageTiles();
                     this.setLightBoxImages()
 
@@ -63,44 +63,55 @@
             }
         },
         methods:{
-            setImageUrls(){
-
-
-                const cloudName = 'dlhvhevvo';
-                const resourceType = 'image';
-                const type = 'upload';
-
-
-                this.imageUrls = this.cloudinaryImageList.map((image, index) => {
-                    const justifiedTile = this.layoutGeometry.boxes[index];
-                    const width = Math.round(justifiedTile.width);
-                    const height = Math.round(justifiedTile.height);
-                    const tranformations = `w_${width},h_${height}`;
-                    return `https://res.cloudinary.com/${cloudName}/${resourceType}/${type}/${tranformations}/${image.public_id}.${image.format}`
-                });
-            },
-            setImageSizeRatios(){
-                this.imageSizeRatios = this.cloudinaryImageList.map((image) => {
-                    return image.width / image.height;
-                });
-            },
             setImageTiles(){
-                this.imageTiles = this.layoutGeometry.boxes.map((box, index) => {
+                this.imageTiles = this.imageList.map((image) => {
                     return {
-                        ...box,
-                        url: this.imageUrls[index],
+                        ...image.tile_geometry,
+                        url: this.getImageSrcOptimizedForTile(image),
                     }
                 });
             },
             setLightBoxImages(){
-                this.lightBoxImages = this.imageTiles.map((tile, index) => {
+                this.lightBoxImages = this.imageList.map((image) => {
                     return {
-                        src: tile.url,
+                        src: this.getImageSrcOptimizedForLightbox(image),
+                    }
+                });
+            },
+            setImageList(){
+                this.imageList = this.cloudinaryImageList.map((image, index) => {
+                    return {
+                        base_height: image.height,
+                        base_width: image.width,
+                        public_id: image.public_id,
+                        format: image.format,
+                        tile_geometry: this.layoutGeometry.boxes[index]
                     }
                 });
             },
             openLightbox(index){
                 this.$refs.lightbox.showImage(index);
+            },
+
+            getImageSrcOptimizedForTile(image){
+                const cloudName = 'dlhvhevvo';
+                const resourceType = 'image';
+                const type = 'upload';
+
+                const width = Math.round(image.tile_geometry.width);
+                const height = Math.round(image.tile_geometry.height);
+                const tranformations = `w_${width},h_${height}`;
+                return `https://res.cloudinary.com/${cloudName}/${resourceType}/${type}/${tranformations}/${image.public_id}.${image.format}`
+            },
+
+            getImageSrcOptimizedForLightbox(image){
+                const cloudName = 'dlhvhevvo';
+                const resourceType = 'image';
+                const type = 'upload';
+
+                const height = window.innerHeight;
+                const tranformations = `h_${height}`;
+                return `https://res.cloudinary.com/${cloudName}/${resourceType}/${type}/${tranformations}/${image.public_id}.${image.format}`
             }
         }
 
