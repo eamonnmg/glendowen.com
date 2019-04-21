@@ -11,7 +11,7 @@
                     <path d="M0-.5h24v24H0z" fill="none"/>
                 </svg>
             </div>
-            <div class="">
+            <div class="flex justify-center w-full">
                 <img v-show="!isLoadingImage"
                      :src="image.src"
                      alt=""
