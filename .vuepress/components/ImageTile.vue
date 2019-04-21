@@ -1,5 +1,13 @@
 <template>
-    <img class="absolute" :style="computedInlineStyle" :src="imageTile.url" alt="">
+    <div class="absolute " :style="computedInlineStyle">
+        <div v-show="isImageLoading" class="skeleton w-full h-full">
+
+        </div>
+        <img v-show="!isImageLoading"
+             :src="imageTile.url"
+             @load="isImageLoading = false"
+        >
+    </div>
 </template>
 
 <script>
@@ -11,14 +19,19 @@
                 required: true,
             }
         },
+        data() {
+          return {
+              isImageLoading: true,
+          }
+        },
         computed: {
             computedInlineStyle(){
-                return `left: ${this.imageTile.left}px; top: ${this.imageTile.top}px`;
+                return `left: ${this.imageTile.left}px; top: ${this.imageTile.top}px; height: ${Math.round(this.imageTile.height)}px; width: ${Math.round(this.imageTile.width)}px;`;
             }
         }
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>

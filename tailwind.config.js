@@ -913,8 +913,8 @@ module.exports = {
         minHeight: ['responsive'],
         minWidth: ['responsive'],
         negativeMargin: ['responsive'],
-        objectFit: false,
-        objectPosition: false,
+        objectFit: ['responsive'],
+        objectPosition: ['responsive'],
         opacity: ['responsive'],
         outline: ['focus'],
         overflow: ['responsive'],
@@ -959,8 +959,6 @@ module.exports = {
             // center: true,
             // padding: '1rem',
         }),
-        require('tailwindcss-object-fit')(['responsive']),
-
     ],
 
 

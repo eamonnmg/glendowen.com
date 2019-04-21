@@ -16,7 +16,7 @@
                      :src="image.src"
                      alt=""
                      @load="onImageLoad"
-                     class="object-scale"
+                     class="object-contain"
                 >
                 <div v-show="isLoadingImage">
                     <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
