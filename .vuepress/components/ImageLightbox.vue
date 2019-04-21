@@ -1,15 +1,17 @@
 <template>
-    <div class="lightbox fixed flex pin z-50 w-full w-full">
-        <div class="fixed pin-r pin-t text-white cursor-pointer text-4xl p-1 mr-2" @click="close">&times;</div>
-            <div class="cursor-pointer self-center px-8"
-                @click="prevImage"
+    <div class="lightbox fixed flex pin z-10 w-screen h-screen">
+        <div class="fixed pin-r pin-t z-40 text-white cursor-pointer text-4xl p-1 mr-2" @click="close">&times;</div>
+
+        <div class="relative flex w-full h-full justify-between items-center">
+            <div class="absolute sm:relative pin-l pin-b sm:pin-none z-40 cursor-pointer self-center px-8"
+                 @click="prevImage"
             >
                 <svg class="pointer-events-none" fill="#fff" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
                     <path d="M0-.5h24v24H0z" fill="none"/>
                 </svg>
             </div>
-            <div class="relative flex w-full h-full justify-center items-center">
+            <div class="">
                 <img v-show="!isLoadingImage"
                      :src="image.src"
                      alt=""
@@ -19,14 +21,16 @@
                     <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 </div>
             </div>
-        <div class="cursor-pointer self-center px-8"
-            @click="nextImage"
-        >
-            <svg class="pointer-events-none" fill="#fff" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
-                <path d="M0-.25h24v24H0z" fill="none"/>
-            </svg>
+            <div class="absolute absolute sm:relative z-40 pin-r pin-b sm:pin-none cursor-pointer self-center px-8"
+                 @click="nextImage"
+            >
+                <svg class="pointer-events-none" fill="#fff" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                    <path d="M0-.25h24v24H0z" fill="none"/>
+                </svg>
+            </div>
         </div>
+
 
     </div>
 </template>
