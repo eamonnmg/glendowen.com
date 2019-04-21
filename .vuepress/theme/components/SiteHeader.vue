@@ -4,6 +4,7 @@
             <div class="flex items-center flex-no-shrink text-black mr-6">
                 <router-link to="/" class="nav-link">
                     <h1 class="text-celtic">Glendowen</h1>
+                    <span class="font-light capitalize text-sm">Traditional Irish Crafts Shop</span>
                 </router-link>
             </div>
             <div class="block sm:hidden">

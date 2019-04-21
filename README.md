@@ -1,9 +1,9 @@
 ---
 carouselSlides:
   - description: This is a heading from frontmatter
-    src: 'https://picsum.photos/1200/600?image=1081'
+    src: 'https://res.cloudinary.com/dlhvhevvo/image/upload/w_1200,h_600,c_fill/v1555532264/DSC_0823_l24jgr.jpg'
   - description: This is a glendowen collage
-    src: 'https://picsum.photos/1200/600?random'
+    src: 'https://res.cloudinary.com/dlhvhevvo/image/upload/w_1200,h_600,c_fill/v1555533123/glendowen-crafts/Other_Crafts_Colage_med_g1llad.jpg'
 title: home
 ---
 ![An image](https://picsum.photos/600/200?random)
