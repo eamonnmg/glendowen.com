@@ -12,12 +12,9 @@
     "@glidejs/glide": "^3.2.7",
     "@google/maps": "^0.5.5",
     "axios": "^0.18.0",
-    "flickr-justified-gallery": "^1.0.2",
     "google-maps": "^3.3.0",
     "justified-layout": "^2.1.1",
     "postcss-import": "^12.0.1",
-    "vue-carousel": "^0.18.0",
-    "vue-image-lightbox": "^6.2.0",
-    "vue-lazyload": "^1.2.6"
+    "vue-carousel": "^0.18.0"
   }
 }

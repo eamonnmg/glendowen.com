@@ -2,15 +2,18 @@
     <div>
         <div class="relative" :style="computedInlineStyle">
             <image-tile
-                    @click.native="openLightbox(index)"
-                    v-for="(tile, index) in imageTiles" :image-tile="tile" />
+                    v-for="(tile, index) in imageTiles" :image-tile="tile"
+                    @click.native="showImage(index)"
+            />
         </div>
-        <light-box
-                ref="lightbox"
-                :images="lightBoxImages"
-                :show-thumbs="false"
-                :show-light-box="false"
-        ></light-box>
+        <image-lightbox
+                v-if="activeImage"
+                :image="activeImage"
+                @close="closeLightbox"
+                @next="showNextImage"
+                @prev="showPrevImage"
+        ></image-lightbox>
+
     </div>
 
 </template>
@@ -18,9 +21,8 @@
 <script>
     import axios from 'axios';
     import JustifiedLayout from 'justified-layout';
-    import LightBox from 'vue-image-lightbox';
     import ImageTile from './ImageTile';
-
+    import ImageLightbox from './ImageLightbox';
     export default {
         name: "JustifiedCloudinaryImageGallery",
         data(){
@@ -29,16 +31,17 @@
                 layoutGeometry: [],
                 imageList: [],
                 imageTiles: [],
-                lightBoxImages: [], // ref: https://github.com/pexea12/vue-image-lightbox#usage
+                lightBoxImages: [],
+                activeImageIndex: null,
 
 
             }
         },
-        components :{
+        components: {
             ImageTile,
-            LightBox
-        },
+            ImageLightbox,
 
+        },
         mounted(){
             axios.get('https://res.cloudinary.com/dlhvhevvo/image/list/glendowen-crafts.json')
                 .then((response) => {
@@ -60,6 +63,13 @@
         computed: {
             computedInlineStyle(){
                 return `height: ${this.layoutGeometry.containerHeight}px;`;
+            },
+
+            activeImage(){
+                if(this.activeImageIndex === null) {
+                    return null;
+                }
+                return this.lightBoxImages[this.activeImageIndex];
             }
         },
         methods:{
@@ -89,9 +99,6 @@
                     }
                 });
             },
-            openLightbox(index){
-                this.$refs.lightbox.showImage(index);
-            },
 
             getImageSrcOptimizedForTile(image){
                 const cloudName = 'dlhvhevvo';
@@ -112,6 +119,29 @@
                 const height = window.innerHeight;
                 const tranformations = `h_${height}`;
                 return `https://res.cloudinary.com/${cloudName}/${resourceType}/${type}/${tranformations}/${image.public_id}.${image.format}`
+            },
+
+            showImage(index){
+                this.activeImageIndex = index;
+            },
+
+            showNextImage(){
+                if(this.activeImageIndex >= this.lightBoxImages.length-1){
+                    return this.activeImageIndex = 0;
+                }
+
+                return this.activeImageIndex++;
+            },
+
+            showPrevImage(){
+                if(this.activeImageIndex === 0){
+                    return this.activeImageIndex <= this.lightBoxImages.length-1;
+                }
+
+                return this.activeImageIndex--;
+            },
+            closeLightbox(){
+                this.activeImageIndex = null;
             }
         }
 
