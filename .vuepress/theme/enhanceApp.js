@@ -1,6 +1,4 @@
-import Vue2TouchEvents from 'vue2-touch-events'
-
-
+import Vue2TouchEvents from '../../node_modules/vue2-touch-events/index.js';
 export default ({
                     Vue, // the version of Vue being used in the VuePress app
                     options, // the options for the root Vue instance

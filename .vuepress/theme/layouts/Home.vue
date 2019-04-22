@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="container mx-auto">
             <carousel :slides="$frontmatter.carouselSlides"></carousel>
 
-        <div class="container flex flex-wrap mb-4">
+        <div class="flex flex-wrap mb-4">
             <div class="md:w-1/2 w-full p-2">
                 <h1 class="h2">Welcome to Glendowen</h1>
 

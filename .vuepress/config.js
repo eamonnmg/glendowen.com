@@ -4,7 +4,7 @@ module.exports = {
     configureWebpack: {
         resolve: {
             alias: {
-                '@images': '~/MEGA/Dev/Projects/glendowen-vuepress/.vuepress/theme/images'
+                '@images': '~/MEGA/Dev/Projects/glendowen-vuepress/.vuepress/theme/images',
             }
         }
     },
