@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Stonehenge Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Stonehenge Regular'), url('stonehen.woff') format('woff');
+}
+
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 //@import "node_modules/vue-image-lightbox/dist/vue-image-lightbox.min.css";
 
@@ -67,12 +74,6 @@
  * @import "utilities/skew-transforms";
  */
 
-@font-face {
-  font-family: 'Stonehenge Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Stonehenge Regular'), url('/fonts/stonehen.woff') format('woff');
-}
 
 body {
   // font-family: Lato, Helvetica, Arial, sans-serif;

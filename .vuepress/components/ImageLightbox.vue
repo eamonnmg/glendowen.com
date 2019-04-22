@@ -1,8 +1,5 @@
 <template>
-    <div class="lightbox fixed flex pin z-10 w-screen h-screen"
-        v-touch:swipe.left="prevImage"
-        v-touch:swipe.right="nextImage"
-    >
+    <div class="lightbox fixed flex pin z-10 w-screen h-screen">
         <div class="fixed pin-r pin-t z-40 text-white cursor-pointer text-4xl p-1 mr-2" @click="close">&times;</div>
 
         <div class="relative flex w-full h-full justify-between items-center">
@@ -20,6 +17,8 @@
                      alt=""
                      @load="onImageLoad"
                      class="object-contain"
+                     v-touch:swipe.right="prevImage"
+                     v-touch:swipe.left="nextImage"
                 >
                 <div v-show="isLoadingImage">
                     <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
