@@ -2,7 +2,7 @@
   font-family: 'Stonehenge Regular';
   font-style: normal;
   font-weight: normal;
-  src: local('Stonehenge Regular'), url('stonehen.woff') format('woff');
+  src: url('/fonts/stonehen.woff') format('woff');
 }
 
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
@@ -84,7 +84,7 @@ p {
 }
 
 .text-celtic {
-  font-family: 'stonehenge', serif;
+  font-family: 'Stonehenge Regular', serif;
 }
 
 .h2 {
