@@ -25,6 +25,12 @@
     import ImageLightbox from './ImageLightbox';
     export default {
         name: "JustifiedCloudinaryImageGallery",
+        props: {
+          tag: {
+              type: String,
+              required: true,
+          }
+        },
         data(){
             return {
                 cloudinaryImageList: [],
@@ -43,7 +49,7 @@
 
         },
         mounted(){
-            axios.get('https://res.cloudinary.com/dlhvhevvo/image/list/glendowen-crafts.json')
+            axios.get(`https://res.cloudinary.com/dlhvhevvo/image/list/${this.tag}.json`)
                 .then((response) => {
                     this.cloudinaryImageList = response.data.resources;
 

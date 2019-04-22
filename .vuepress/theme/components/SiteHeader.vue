@@ -17,8 +17,11 @@
                     <router-link :to="'/about'" class="nav-link">
                         About
                     </router-link>
-                    <router-link :to="'/glendowen-products'" class="nav-link">
+                    <router-link :to="'/glendowen-crafts'" class="nav-link">
                         Glendowen Crafts
+                    </router-link>
+                    <router-link :to="'/other-crafts'" class="nav-link">
+                        Other Crafts
                     </router-link>
                 </div>
                 <div>

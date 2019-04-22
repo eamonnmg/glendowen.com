@@ -13,11 +13,13 @@
                                 </div>
 
                                 <div class="absolute container h-full w-full pin-t">
-                                    <div class="relative w-full h-full flex flex-wrap md:justify-end items-center">
-                                        <p class="h2 w-screen">
-                                            {{slide.description}}
-                                        </p>
-                                    </div>
+                                    <router-link :to="`/${slide.link}`" class="nav-link">
+                                        <div class="relative w-full h-full flex flex-wrap md:justify-end items-center">
+                                            <p class="h2 w-screen">
+                                                {{slide.description}}
+                                            </p>
+                                        </div>
+                                    </router-link>
                                 </div>
 
 
