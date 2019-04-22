@@ -1,5 +1,5 @@
 <template>
-    <div class="absolute " :style="computedInlineStyle">
+    <div class="absolute cursor-pointer" :style="computedInlineStyle">
         <div v-show="isImageLoading" class="skeleton w-full h-full">
 
         </div>

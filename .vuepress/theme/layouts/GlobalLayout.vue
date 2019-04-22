@@ -2,7 +2,7 @@
     <div>
         <site-header></site-header>
 
-        <div class="container mx-auto sc">
+        <div class="mx-auto">
             <component :is="layout"></component>
         </div>
 

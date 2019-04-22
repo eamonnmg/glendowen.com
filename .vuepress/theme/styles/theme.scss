@@ -68,8 +68,10 @@
  */
 
 @font-face {
-  font-family: 'stonehenge regular';
-  src: url('/fonts/stonehenge.ttf') format('ttf');
+  font-family: 'Stonehenge Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Stonehenge Regular'), url('/fonts/stonehen.woff') format('woff');
 }
 
 body {

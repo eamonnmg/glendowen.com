@@ -1,7 +1,7 @@
 ---
 
 title: Glendowen Crafts
-layout: Page
+layout: GalleryPage
 
 ---
 
