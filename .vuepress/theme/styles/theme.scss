@@ -4,7 +4,7 @@
   font-weight: normal;
   src: url('/fonts/stonehen.woff') format('woff');
 }
-
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 //@import "node_modules/vue-image-lightbox/dist/vue-image-lightbox.min.css";
 
@@ -92,10 +92,10 @@ p {
 }
 
 .nav-link {
-  @apply text-grey-darkest no-underline block mt-4 mr-4;
+  @apply font-medium text-grey-darkest no-underline block mt-4 mr-4;
 }
 .nav-link:hover {
-  @apply text-black;
+  @apply text-purple;
 }
 @screen sm {
   .nav-link {

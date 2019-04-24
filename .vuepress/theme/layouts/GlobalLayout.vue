@@ -7,8 +7,8 @@
         </div>
 
 
-        <div class="border-t pin-b">
-            footer
+        <div class="pin-b flex justify-center items-center h-32">
+            Copyright © {{new Date().getFullYear()}} · Glendowen Craft Studio
 
         </div>
 
