@@ -3,21 +3,24 @@
         <div class="glide ">
             <div data-glide-el="track" class="glide__track">
                 <ul class="glide__slides">
-                    <li class="glide__slide"
+                    <li class="glide__slide relative"
                         v-for="(slide,index) in slides"
                         :key="index"
                     >
-                            <div class="container absolute w-full h-24 pin-b">
-                                <div class="relative opacity-50 bg-white flex h-full w-full items-end">
+                            <div class="absolute w-full h-24 md:w-1/3 md:h-full pin-b md:pin-none md:pin-r">
+                                <div class="absolute opacity-50 bg-white flex h-full w-full items-end">
 
                                 </div>
 
-                                <div class="absolute container h-full w-full pin-t">
+                                <div class="relative h-full w-full">
                                     <router-link :to="`/${slide.link}`" class="nav-link">
-                                        <div class="relative w-full h-full flex flex-wrap md:justify-end items-center">
-                                            <p class="h2 w-screen">
-                                                {{slide.description}}
-                                            </p>
+                                        <div class="relative w-full h-full">
+                                            <div class="h-full">
+                                                <h2>
+                                                    {{slide.heading}}
+                                                </h2>
+                                                <p class=""> {{slide.description}} </p>
+                                            </div>
                                         </div>
                                     </router-link>
                                 </div>
