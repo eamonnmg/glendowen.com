@@ -76,19 +76,19 @@
 
 
 body {
-  // font-family: Lato, Helvetica, Arial, sans-serif;
+  @apply text-base font-sans leading-normal tracking-normal;
 }
 
 p {
-  @apply my-4 text-base font-sans leading-normal tracking-normal;
+  @apply my-4 ;
 }
 
 .text-celtic {
   font-family: 'Stonehenge Regular', serif;
 }
 
-.h2 {
-  @apply text-3xl mb-4;
+.heading-1 {
+  @apply text-4xl font-light;
 }
 
 .nav-link {

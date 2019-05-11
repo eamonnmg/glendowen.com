@@ -16,7 +16,7 @@
                                     <router-link :to="`/${slide.link}`" class="nav-link">
                                         <div class="relative w-full h-full">
                                             <div class="h-full">
-                                                <h2>
+                                                <h2 class="heading-1">
                                                     {{slide.heading}}
                                                 </h2>
                                                 <p class=""> {{slide.description}} </p>

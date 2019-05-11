@@ -4,7 +4,7 @@
 
         <div class="flex flex-wrap mb-4">
             <div class="md:w-1/2 w-full p-2">
-                <h2>Welcome to Glendowen</h2>
+                <h2 class="mb-4 heading-1">Welcome to Glendowen</h2>
                 <img src="https://res.cloudinary.com/dlhvhevvo/image/upload/v1556129981/ann-mc-gonigle/yqk2fws5zpbft8cqtjuk.jpg" alt="Ann Mc Gonigle">
                 <Content/>
 
@@ -32,7 +32,7 @@
 
             </div>
             <div class="md:w-1/2 w-full p-2">
-                <h2>Location</h2>
+                <h2 class="mb-4 heading-1">Location</h2>
 
                 <div class="location-map">
                     <location-map></location-map>
