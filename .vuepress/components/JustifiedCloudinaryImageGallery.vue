@@ -56,7 +56,7 @@
 
                     this.layoutGeometry = JustifiedLayout(this.cloudinaryImageList, {
                         containerWidth: this.$el.offsetWidth,
-                    })
+                    });
 
                     this.setImageList();
 

@@ -7,7 +7,7 @@
                         v-for="(slide,index) in slides"
                         :key="index"
                     >
-                            <div class="absolute w-full h-24 md:w-1/3 md:h-full pin-b md:pin-none md:pin-r">
+                            <div class="absolute w-full md:w-1/3 md:h-full pin-b md:pin-none md:pin-r">
                                 <div class="absolute opacity-50 bg-white flex h-full w-full items-end">
 
                                 </div>
