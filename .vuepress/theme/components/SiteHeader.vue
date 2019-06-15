@@ -1,6 +1,6 @@
 <template>
     <div class="font-sans antialiased">
-        <nav class="flex items-center justify-between flex-wrap bg-white p-6 border-purple border-b">
+        <nav class="flex items-center justify-between flex-wrap bg-white p-3 border-purple border-b">
             <div class="flex items-center flex-no-shrink text-black mr-6">
                 <router-link to="/" class="nav-link">
                     <h1 class="text-celtic">Glendowen</h1>
