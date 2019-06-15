@@ -9,7 +9,7 @@
                     >
                         <router-link :to="`/${slide.link}`" class="font-medium text-black no-underline block mt-4 mr-4">
 
-                        <div class="absolute w-full md:w-1/3 md:h-full pin-b md:pin-none md:pin-r"
+                        <div class="absolute w-full md:w-2/5 md:h-full pin-b md:pin-none md:pin-r"
                             @mouseover="hoveredSlide = index"
                             @mouseout="hoveredSlide = null"
                         >
