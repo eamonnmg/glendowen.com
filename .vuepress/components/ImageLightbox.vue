@@ -53,6 +53,12 @@
                 isLoadingImage: true,
             }
         },
+        mounted(){
+          this.lockBodyScroll();
+        },
+        beforeDestroy(){
+            this.unlockBodyScroll();
+        },
         methods: {
             nextImage(){
                 this.$emit('next');
@@ -66,6 +72,12 @@
             onImageLoad(){
                 this.isLoadingImage= false
             },
+            lockBodyScroll(){
+                document.body.style.setProperty('overflow','hidden');
+            },
+            unlockBodyScroll(){
+                document.body.style.removeProperty('overflow');
+            }
         },
         watch: {
             image(){
