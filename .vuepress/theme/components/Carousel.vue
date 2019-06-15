@@ -7,26 +7,36 @@
                         v-for="(slide,index) in slides"
                         :key="index"
                     >
-                            <div class="absolute w-full md:w-1/3 md:h-full pin-b md:pin-none md:pin-r">
-                                <div class="absolute opacity-50 bg-white flex h-full w-full items-end">
+                        <router-link :to="`/${slide.link}`" class="font-medium text-black no-underline block mt-4 mr-4">
+
+                        <div class="absolute w-full md:w-1/3 md:h-full pin-b md:pin-none md:pin-r"
+                            @mouseover="hoveredSlide = index"
+                            @mouseout="hoveredSlide = null"
+                        >
+                                <div class="absolute opacity-50 bg-white flex h-full w-full items-end"
+                                    :class="{'opacity-75': hoveredSlide === index}"
+                                >
 
                                 </div>
 
-                                <div class="relative h-full w-full">
-                                    <router-link :to="`/${slide.link}`" class="nav-link">
-                                        <div class="relative w-full h-full">
-                                            <div class="h-full">
-                                                <h2 class="heading-1">
-                                                    {{slide.heading}}
-                                                </h2>
-                                                <p class=""> {{slide.description}} </p>
+                                    <div class="relative h-full w-full">
+                                            <div class="relative w-full h-full">
+                                                <div class="h-full p-4 flex flex-col justify-end">
+                                                    <h2 class="heading-1"
+                                                        :class="{'underline': hoveredSlide === index}"
+                                                    >
+                                                        {{slide.heading}}
+                                                    </h2>
+                                                    <p class=""> {{slide.description}} </p>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </router-link>
-                                </div>
+                                    </div>
+
+
 
 
                             </div>
+                        </router-link>
                             <img :src="slide.src" :alt="slide.description">
                     </li>
                 </ul>
@@ -54,6 +64,11 @@
                 type: Array,
             }
         },
+        data(){
+            return {
+                hoveredSlide: null,
+            }
+        },
         mounted() {
             this.glide = new Glide(this.$el, {
                 type: 'carousel',
@@ -65,5 +80,4 @@
 </script>
 
 <style scoped>
-
 </style>
