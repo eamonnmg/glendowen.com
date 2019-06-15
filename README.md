@@ -1,7 +1,7 @@
 ---
 carouselSlides:
   - heading: Take a Look Inside
-    description: See what make the Glendowen Crafts Shop a magical place with this gallery …
+    description: See what makes the Glendowen Crafts Shop a magical place with this gallery …
     src: 'https://res.cloudinary.com/dlhvhevvo/image/upload/w_1200,h_600,c_fill/v1555532264/DSC_0823_l24jgr.jpg'
     link: inside-shop
   - heading: Glendowen Exclusive Crafts
