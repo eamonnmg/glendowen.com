@@ -88,7 +88,16 @@ p {
 }
 
 .heading-1 {
-  @apply text-4xl font-light;
+  @apply text-xl font-light;
+  @screen xs {
+    @apply text-2xl;
+  }
+  @screen sm {
+    @apply text-3xl;
+  }
+  @screen md {
+    @apply text-4xl;
+  }
 }
 
 .nav-link {

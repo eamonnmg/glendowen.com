@@ -21,13 +21,22 @@
 
                                     <div class="relative h-full w-full">
                                             <div class="relative w-full h-full">
-                                                <div class="h-full p-4 flex flex-col justify-end">
+                                                <div class="h-full p-4 flex flex-col justify-end ">
                                                     <h2 class="heading-1"
                                                         :class="{'underline': hoveredSlide === index}"
                                                     >
                                                         {{slide.heading}}
                                                     </h2>
-                                                    <p class=""> {{slide.description}} </p>
+                                                    <p class="text-xs sm:text-sm md:text-base"> {{slide.description}}
+                                                    </p>
+                                                    <span
+                                                            class="text-xs sm:mb-4"
+                                                            :class="{
+                                                            'underline': hoveredSlide === index
+                                                            }"
+
+                                                    >Click for more.</span>
+
                                                 </div>
                                             </div>
                                     </div>
