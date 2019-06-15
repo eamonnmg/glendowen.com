@@ -16,7 +16,7 @@ module.exports = {
     },
     markdown: {
         anchor: {
-            permalink: false, permalinkBefore: false, permalinkSymbol: 'dasdas'
+            permalink: false, permalinkBefore: false, permalinkSymbol: ''
         }
     },
 }

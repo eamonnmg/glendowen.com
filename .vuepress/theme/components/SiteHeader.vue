@@ -20,6 +20,9 @@
                     <router-link :to="'/other-crafts'" class="nav-link">
                         Other Crafts
                     </router-link>
+                    <router-link :to="'/inishowen'" class="nav-link">
+                       Visiting Inishowen?
+                    </router-link>
                     <router-link :to="'/about'" class="nav-link">
                         About
                     </router-link>
